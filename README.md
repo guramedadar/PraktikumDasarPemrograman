@@ -1,2 +1,2 @@
 # PraktikumDasarPemrograman
-Ingin belajar Dasar Pomrograman namun enggan mengooding
+Ingin belajar Dasar Pomrograman namun malas mengoding
