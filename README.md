@@ -1,2 +1,1 @@
-# PraktikumDasarPemrograman
-Ingin belajar Dasar Pomrograman namun malas mengoding
+Hello Github, ini adalah repository pertama saya.
