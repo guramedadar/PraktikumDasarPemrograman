@@ -7,10 +7,9 @@ public class ifCetakKRS8 {
         System.out.println("Have the tuition fees been paid in full? (true/false): ");
         boolean ukt_lunas = sc.nextBoolean();
 
-        if (ukt_lunas) {
-            System.out.println("UKT payment has been verified");
-            System.out.println("KRS now can be printed and you can ask the academic advisor to sign it."); }
-        else {
-            System.out.println("Registration rejected. Please pay UKT first."); }
+        String message = ukt_lunas ? "UKT payment has been verified. \nKRS now can be printed and you can ask the academic advisor to sign it." 
+        : "Registration rejected. Please pay UKT first";
+        System.out.println(message);
         }
 }
+ 
