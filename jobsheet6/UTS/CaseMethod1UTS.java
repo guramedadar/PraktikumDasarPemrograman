@@ -9,6 +9,7 @@ public class CaseMethod1UTS {
         String name = sc.nextLine();
         System.out.print("NIM: ");
         String nim = sc.nextLine();
+        System.out.println();
 
         System.out.println("===== 1st Subject: Alghorithms and Programming =====");
         System.out.print("UTS score: ");
@@ -33,8 +34,8 @@ public class CaseMethod1UTS {
         System.out.println("NIM: " + nim);
         System.out.println();
 
-        float finalscore1 = uts1 * uas1 * task1 / 3;
-        float finalscore2 = uts2 * uas2 * task2 / 3;
+        float finalscore1 = (uts1 + uas1 + task1) / 3;
+        float finalscore2 = (uts2 + uas2 + task2) / 3;
         String statussubject1, statussubject2, grade1, grade2;
 
         if (finalscore1 >= 60) {
@@ -115,7 +116,7 @@ public class CaseMethod1UTS {
             }
         }
 
-        float finalScoreSemester = finalscore1 * finalscore2 / 2;
+        float finalScoreSemester = (finalscore1 + finalscore2) / 2;
         String statusSemester;
 
         if (finalScoreSemester >= 70) {
@@ -124,10 +125,10 @@ public class CaseMethod1UTS {
             statusSemester = "NOT PASSED (Average < 70)";
         }
 
-        System.out.println("Subject\t\t\t\t\t\t\t\t\t\t\t\t\tUTS\t\t\tUAS\t\t\tTask\t\t\tFinal Score\t\t\tGrade\t\t\tStatus");
+        System.out.println("Subject\t\t\tUTS\t\tUAS\t\ttask\t\tFinal Score\tGrade\tStatus");
         System.out.println("-----------------------------------------------------------------------------------------");
-        System.out.printf("Programming Algorithms\t\t\t%f\t\t\t%f\t\t\t%f\t\t\t%f\t\t\t%s\t\t\t%s\n", uts1, uas1, task1, finalscore1, grade1, statussubject1);
-        System.out.printf("Data Structure\t\t\t\t\t\t\t%f\t\t\t%f\t\t\t%f\t\t\t%f\t\t\t%s\t\t\t%s\n\n", uts2, uas2, task2, finalscore2, grade2, statussubject2);
+        System.out.printf("Programming Algorithms\t%f\t%f\t%f\t%f\t%s\t%s\n", uts1, uas1, task1, finalscore1, grade1, statussubject1);
+        System.out.printf("Data Structure\t\t%f\t%f\t%f\t%f\t%s\t%s\n\n", uts2, uas2, task2, finalscore2, grade2, statussubject2);
 
         System.out.println("Average final grade: " + finalScoreSemester);
         System.out.println("Semester status: " + statusSemester);
