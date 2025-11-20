@@ -1,9 +1,13 @@
 package jobsheet6.UTS;
+
 import java.util.Scanner;
+
 public class CaseMethod1UTS {
     public static void main(String[] args) {
+
         Scanner sc = new Scanner(System.in);
 
+        // Input Name and Nim
         System.out.println("===== COLLEGE DATA INPUT =====");
         System.out.print("Name: ");
         String name = sc.nextLine();
@@ -11,6 +15,7 @@ public class CaseMethod1UTS {
         String nim = sc.nextLine();
         System.out.println();
 
+        // Input 1st subject score
         System.out.println("===== 1st Subject: Alghorithms and Programming =====");
         System.out.print("UTS score: ");
         float uts1 = sc.nextFloat();
@@ -20,6 +25,7 @@ public class CaseMethod1UTS {
         float task1 = sc.nextFloat();
         System.out.println();
 
+        // Input 2nd subject score
         System.out.println("===== 2nd Subject: Data Structure =====");
         System.out.print("UTS score: ");
         float uts2 = sc.nextFloat();
@@ -29,15 +35,18 @@ public class CaseMethod1UTS {
         float task2 = sc.nextFloat();
         System.out.println();
 
+        // Print name and nim
         System.out.println("===== ACADEMIC ASSESSMENT RESULTS =====");
         System.out.println("Name: " + name);
         System.out.println("NIM: " + nim);
         System.out.println();
 
-        float finalscore1 = (uts1 + uas1 + task1) / 3;
-        float finalscore2 = (uts2 + uas2 + task2) / 3;
+        // Finalscore process for 1st & 2nd subjects, input new variable for branching
+        float finalscore1 = (float) (uts1*0.3 + uas1*0.4 + task1*0.3) ;
+        float finalscore2 = (float) (uts2*0.3 + uas2*0.4 + task2*0.3);
         String statussubject1, statussubject2, grade1, grade2;
 
+        // Determine Status and Grade of 1st Subject with if else
         if (finalscore1 >= 60) {
             statussubject1 = "PASS";
             
@@ -74,9 +83,10 @@ public class CaseMethod1UTS {
                 grade1 = "D";
             } else {
                 grade1 = "E";
-            }
+              }
         }
         
+        // Determine Status and Grade of 2nd Subject with if else
         if (finalscore2 >= 60) {
             statussubject2 = "PASS";
             
@@ -116,19 +126,22 @@ public class CaseMethod1UTS {
             }
         }
 
+        // The process of final score semester for 1st and 2nd subject, input new variable
         float finalScoreSemester = (finalscore1 + finalscore2) / 2;
         String statusSemester;
 
+        // Determine status semester with if else
         if (finalScoreSemester >= 70) {
             statusSemester = "PASS (Average >= 70)";
         } else {
             statusSemester = "NOT PASSED (Average < 70)";
         }
 
-        System.out.println("Subject\t\t\tUTS\t\tUAS\t\ttask\t\tFinal Score\tGrade\tStatus");
+        // Output and results
+        System.out.println("Subject\t\t\tUTS\tUAS\ttask\tFinal Score\tGrade\tStatus");
         System.out.println("-----------------------------------------------------------------------------------------");
-        System.out.printf("Programming Algorithms\t%f\t%f\t%f\t%f\t%s\t%s\n", uts1, uas1, task1, finalscore1, grade1, statussubject1);
-        System.out.printf("Data Structure\t\t%f\t%f\t%f\t%f\t%s\t%s\n\n", uts2, uas2, task2, finalscore2, grade2, statussubject2);
+        System.out.printf("Programming Algorithms\t%.2f\t%.2f\t%.2f\t%.2f\t\t%s\t%s\n", uts1, uas1, task1, finalscore1, grade1, statussubject1);
+        System.out.printf("Data Structure\t\t%.2f\t%.2f\t%.2f\t%.2f\t\t%s\t%s\n\n", uts2, uas2, task2, finalscore2, grade2, statussubject2);
 
         System.out.println("Average final grade: " + finalScoreSemester);
         System.out.println("Semester status: " + statusSemester);

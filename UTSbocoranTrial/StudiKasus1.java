@@ -3,7 +3,7 @@ package UTSbocoranTrial;
 import java.util.Scanner;
 
 public class StudiKasus1 {
-    public static void main(String[] args) {
+    public static void main(String[] args) { 
     Scanner sc = new Scanner(System.in);
 
     System.out.println("===== MENENTUKAN ANGKA PALING BESAR =====");
@@ -18,19 +18,19 @@ public class StudiKasus1 {
     int angka3 = sc.nextInt();
 
     if (angka1 > angka2 && angka1 > angka3) {
-        System.out.printf("Angka terbesar adalah angka %d \n", angka1); }
+        System.out.printf("Angka terbesar adalah angka %d yaitu angka pertama \n", angka1); }
     else if (angka2 > angka1 && angka2 > angka3) {
-        System.out.printf("Angka terbesar adalah angka %d \n", angka2); }
+        System.out.printf("Angka terbesar adalah angka %d yaitu angka kedua\n", angka2); }
     else if (angka3 > angka1 && angka3 > angka2) {
-        System.out.printf("Angka terbesar adalah angka %d \n", angka3); } 
+        System.out.printf("Angka terbesar adalah angka %d yaitu angka ketiga\n", angka3); } 
     else if (angka1 > angka3 && angka2 > angka3 && angka1 == angka2) {
-        System.out.printf("Angka terbesar adalah angka %d \n", angka1); }
+        System.out.printf("Angka terbesar adalah angka %d yaitu angka pertama & kedua\n", angka1); }
     else if (angka1 > angka2 && angka3 > angka2 && angka1 == angka3) {
-        System.out.printf("Angka terbesar adalah angka %d  \n", angka1); }
+        System.out.printf("Angka terbesar adalah angka %d yaitu angka pertama dan ketiga\n", angka1); }
     else if (angka2 > angka1 && angka3 > angka1 && angka2 == angka3) {
-        System.out.printf("Angka terbesar adalah angka %d  \n", angka2); }
+        System.out.printf("Angka terbesar adalah angka %d yaitu angka kedua dan ketiga\n", angka2); }
     else {
-        System.out.printf("Angka terbesar adalah angka %d \n", angka1); }
+        System.out.printf("Angka terbesar adalah angka %d yaitu angka pertama, kedua, dan ketiga\n", angka1); }
     
     sc.close();
     }
